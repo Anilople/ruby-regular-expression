@@ -1,9 +1,27 @@
 # ruby-regular-expression
 计算的本质 3.3 正则表达式 具体实现
 
+## 运行正则匹配
+
+```shell
+# 因为treetop对路径有特殊要求, 所以必须cd ./src/main
+cd ./src/main
+ruby main.rb
+```
+
+## 测试
+
 测试中的NFA为
 
 ![nfa](./picture/nfa.png)
+
+测试`src/main/NFA.rb`
+
+```shell
+ruby src/test/NFATest.rb
+```
+
+其它测试以此类推.
 
 ## 在Ruby中表示自由移动（free move）
 
