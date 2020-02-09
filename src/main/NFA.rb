@@ -17,4 +17,10 @@ class NFA < Struct.new(:current_states, :accept_states, :rulebook)
     def read_string(string)
         string.chars.each do |character| read_character(character) end
     end
+
+    # NFA当前的状态（包括自由移动后能到达的状态）
+    # 会覆盖原先自己的属性
+    def current_states
+        rulebook.follow_free_moves(super)
+    end
 end
